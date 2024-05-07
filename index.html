@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav_item{
+            height: 30px;
+            width: 100px;
+            border: 1px solid black;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 30px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            width: 100%;
+            /* display: none; */
+            transform: scaleY(0);
+            transition: all 0.2s ease-out;
+            transform-origin: top left;
+
+        }
+
+        .open {
+            transform: scaleY(1);
+        }
+
+        .dropdown > .dropdown_element{
+            display: flex;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav_item">
+        About
+        <div class="dropdown">
+            <div class="dropdown_element">Contact</div>
+            <div class="dropdown_element">Phone</div>
+            <div class="dropdown_element">Email</div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
